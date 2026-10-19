@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="smart-mind-logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b18">
+<title>Smart Mind Academy — Code the Future</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="shell nav">
+  <a class="brand" href="#home" style="text-decoration:none;color:inherit"><img class="logo" src="smart-mind-logo.png" alt="Smart Mind Academy logo"><span>SMART MIND <small>ACADEMY / NEXT GEN LEARNING</small></span></a>
+  <nav class="navlinks" id="navlinks"><a href="#courses">Courses</a><a href="#lab">Coding Lab</a><a href="#ai">AI Studio</a><a href="#progress">My Progress</a></nav>
+  <button class="btn primary" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">Start learning ↗</button>
+  <button class="btn secondary mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button>
+</div></header>
+<main>
+<section class="shell hero" id="home">
+ <div><div class="eyebrow"><span class="pulse"></span> YOUR FUTURE STARTS HERE</div>
+  <h1>Don't just use<br>technology.<br><span class="gradient">Create the future.</span></h1>
+  <p>Learn to code, build games, and explore artificial intelligence through hands-on projects designed for the next generation of creators.</p>
+  <div class="actions"><button class="btn primary" onclick="document.querySelector('#courses').scrollIntoView({behavior:'smooth'})">Explore courses <span>→</span></button><button class="btn secondary" onclick="document.querySelector('#lab').scrollIntoView({behavior:'smooth'})">⌘ Try the coding lab</button></div>
+  <div class="proof"><span>✦ <strong>Learn by doing</strong></span><span>✦ <strong>Build real projects</strong></span><span>✦ <strong>Think like a creator</strong></span></div>
+ </div>
+ <div class="visual"><div class="orbit"><div class="core">⌘</div></div><div class="float-card fc1">✦ <strong>AI Explorer</strong><span style="color:var(--muted)">Your ideas, upgraded</span></div><div class="float-card fc2">⚡ <strong>Build mode: ON</strong><span style="color:var(--muted)">One line at a time</span></div><div class="float-card fc3">● LEARNING SYSTEM ONLINE</div></div>
+</section>
+<section class="shell section" id="courses">
+ <div class="section-head"><div><div class="tag">01 / Learning pathways</div><h2>Choose your next <span class="gradient">level.</span></h2></div><p>Start with the basics, then turn your ideas into games, websites, and intelligent creations.</p></div>
+ <div class="grid">
+  <article class="card"><div class="card-icon">🧩</div><h3>Coding Fundamentals</h3><p>Learn logic, sequences, loops, and conditions—the building blocks of every program.</p><div class="meta"><span>◷ 6 beginner lessons</span><span>BEGINNER</span></div><div class="progress"><span id="prog-fundamentals" style="width:0%"></span></div><div class="card-foot"><small id="label-fundamentals" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('fundamentals')">Start lesson →</button></div></article>
+  <article class="card"><div class="card-icon">🎮</div><h3>Game Development</h3><p>Design characters, create rules, and build games that friends can play.</p><div class="meta"><span>◷ 8 project lessons</span><span>BEGINNER</span></div><div class="progress"><span id="prog-games" style="width:0%"></span></div><div class="card-foot"><small id="label-games" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('games')">Explore course →</button></div></article>
+  <article class="card"><div class="card-icon">🌐</div><h3>Web Development</h3><p>Use HTML, CSS, and JavaScript to bring your own website to life.</p><div class="meta"><span>◷ 10 practical lessons</span><span>BEGINNER</span></div><div class="progress"><span id="prog-web" style="width:0%"></span></div><div class="card-foot"><small id="label-web" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('web')">Start lesson →</button></div></article>
+  <article class="card"><div class="card-icon">🐍</div><h3>Python Programming</h3><p>Discover variables, decisions, loops, and how to solve problems with Python.</p><div class="meta"><span>◷ 9 guided lessons</span><span>BEGINNER</span></div><div class="progress"><span id="prog-python" style="width:0%"></span></div><div class="card-foot"><small id="label-python" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('python')">Explore course →</button></div></article>
+  <article class="card"><div class="card-icon">🤖</div><h3>Artificial Intelligence</h3><p>Understand how AI works and learn to think critically about intelligent tools.</p><div class="meta"><span>◷ 6 discovery lessons</span><span>EXPLORER</span></div><div class="progress"><span id="prog-ai" style="width:0%"></span></div><div class="card-foot"><small id="label-ai" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('ai')">Explore course →</button></div></article>
+  <article class="card"><div class="card-icon">🎬</div><h3>AI Animation Studio</h3><p>Plan characters, write scenes, and explore the creative side of AI animation.</p><div class="meta"><span>◷ 5 creative projects</span><span>CREATOR</span></div><div class="progress"><span id="prog-animation" style="width:0%"></span></div><div class="card-foot"><small id="label-animation" style="color:var(--muted)">0% completed</small><button class="linkbtn" onclick="startLesson('animation')">Enter studio →</button></div></article>
+ </div>
+</section>
+<section class="shell section" id="lab">
+ <div class="section-head"><div><div class="tag">02 / Interactive workspace</div><h2>Your first <span class="gradient">coding lab.</span></h2></div><p>Change the code, press Run, and instantly see what your browser creates. No setup required.</p></div>
+ <div class="lab">
+  <div class="lab-intro"><div class="card-icon">⌨️</div><h3>Mission 001: Build a greeting</h3><p>You're the developer. Edit the HTML to customise your first mini webpage, then run it to preview your creation.</p>
+   <div class="step"><div class="stepnum">1</div><div><strong>Read the code</strong><span>HTML gives a webpage its structure.</span></div></div>
+   <div class="step"><div class="stepnum">2</div><div><strong>Make it yours</strong><span>Change the heading or message.</span></div></div>
+   <div class="step"><div class="stepnum">3</div><div><strong>Run your creation</strong><span>Preview your work on the right.</span></div></div>
+   <button class="btn secondary" onclick="resetCode()">↺ Reset mission</button>
+  </div>
+  <div class="editor-wrap"><div class="editor-top"><div style="display:flex;align-items:center;gap:12px"><span class="dots"><i></i><i></i><i></i></span><small>index.html</small></div><div class="editor-actions"><button class="mini" onclick="resetCode()">Reset</button><button class="mini run" onclick="runCode()">▶ Run code</button></div></div>
+   <textarea class="codearea" id="code" spellcheck="false" aria-label="HTML code editor"><!DOCTYPE html>
+<html>
+  <body style="font-family:Arial;text-align:center;padding:24px">
+    <h1 style="color:#6557e8">Hello, future coder! 🚀</h1>
+    <p>I'm learning to build things with code.</p>
+    <button onclick="alert('Mission complete!')">
+      Click me
+    </button>
+  </body>
+</html></textarea>
+   <div class="preview-label">LIVE PREVIEW / OUTPUT</div><div class="preview"><iframe id="preview" title="Your webpage preview" sandbox="allow-scripts"></iframe></div><div class="notice">Tip: This starter lab runs HTML, CSS, and JavaScript in your browser. Never paste private information into code.</div>
+  </div>
+ </div>
+</section>
+<section class="shell section" id="ai">
+ <div class="section-head"><div><div class="tag">03 / Beyond the code</div><h2>Think bigger with <span class="gradient">AI.</span></h2></div><p>Technology is more than writing code. Learn to turn curiosity into useful, creative projects.</p></div>
+ <div class="feature-band">
+  <article class="feature"><div class="big">🧠</div><h3>AI Explorer</h3><p>Explore what artificial intelligence can and cannot do, how to ask better questions, and why responsible use matters.</p><button class="btn secondary" onclick="showInfo('AI Explorer','Explore AI through guided activities: classify examples, compare human and machine decisions, and discuss safe, responsible AI use.')">Explore pathway →</button></article>
+  <article class="feature"><div class="big">🎨</div><h3>Creative AI Studio</h3><p>Develop an idea into a character, storyboard, game concept, or animation plan with a creator-first workflow.</p><button class="btn secondary" onclick="showInfo('Creative AI Studio','Your creative mission: invent a character, write a short scene, map out shots, and plan how you would animate it.')">Open studio →</button></article>
+ </div>
+</section>
+<section class="shell section" id="progress">
+ <div class="section-head"><div><div class="tag">04 / Your learning dashboard</div><h2>Every step moves you <span class="gradient">forward.</span></h2></div><p>Your demo progress is saved in this browser on this device.</p></div>
+ <div class="feature"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap"><div><h3 style="margin:0">Creator profile</h3><p style="margin:5px 0 0">Welcome, Future Coder. Ready for your next mission?</p></div><button class="btn secondary" onclick="resetProgress()">Reset demo progress</button></div><div class="stats"><div class="stat"><strong id="stat-lessons">0</strong><span>Lessons started</span></div><div class="stat"><strong id="stat-points">0 XP</strong><span>Experience points</span></div><div class="stat"><strong id="stat-streak">1 day</strong><span>Learning streak demo</span></div></div><div style="margin-top:22px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px"><strong>Academy progress</strong><span id="overall-label" style="color:var(--cyan)">0%</span></div><div class="progress" style="height:8px"><span id="overall-progress" style="width:0%"></span></div></div></div>
+</section>
+<section class="shell section">
+ <div class="quizbox"><div style="flex:1"><div class="tag">Quick challenge / 001</div><h2 style="margin:8px 0">What does HTML do?</h2><p>Test your understanding and earn 10 XP for a correct answer.</p><div class="quiz-options"><button onclick="answerQuiz(this,false)">It stores computer files</button><button onclick="answerQuiz(this,true)">It structures webpage content</button><button onclick="answerQuiz(this,false)">It is a type of computer</button></div><div class="quiz-result" id="quiz-result" role="status"></div></div><div style="font-size:60px">🧪</div></div>
+</section>
+</main>
+<footer><div class="shell footer-inner"><div class="brand"><img class="logo" src="smart-mind-logo.png" alt="Smart Mind Academy logo"><span>SMART MIND ACADEMY <small>CODE THE FUTURE</small></span></div><span>Learn boldly. Build thoughtfully. Create what's next.</span><span>© <span id="year"></span> Smart Mind Academy · Demo experience</span></div></footer>
+<div id="modal" style="display:none;position:fixed;inset:0;background:#030611cc;z-index:30;place-items:center;padding:20px"><div style="max-width:480px;width:100%;background:#11182d;border:1px solid #55e7ff55;border-radius:20px;padding:26px;box-shadow:0 25px 80px #0008"><div class="tag">YOUR NEXT MISSION</div><h2 id="modal-title">Course mission</h2><p id="modal-text" style="color:var(--muted);font-size:14px"></p><div id="lesson-content" style="font-size:13px;line-height:1.8"></div><div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><button class="btn primary" id="completeBtn" onclick="completeLesson()">Mark lesson complete +20 XP</button><button class="btn secondary" onclick="closeModal()">Close</button></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
